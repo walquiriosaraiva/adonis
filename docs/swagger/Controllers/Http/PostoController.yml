@@ -1,0 +1,237 @@
+/api/posto:
+  get:
+    tags:
+      - Posto
+    summary: Lista dos postos
+    responses:
+      200:
+        description: Lista dos postos
+        content:
+          application/json:
+            schema:
+              properties:
+                id_posto:
+                  type: number
+                  example: 1
+                no_posto:
+                  type: string
+                  example: 'Pretória'
+                sg_posto:
+                  type: string
+                  example: 'PA'
+                id_pais:
+                  type: number
+                  example: 113
+                nu_fator_conversao_rb:
+                  type: number
+                  example: 94.64
+                nu_fator_conversao_irex:
+                  type: number
+                  example: 47.32
+                in_ativo:
+                  type: boolean
+                  example: true
+  post:
+    tags:
+      - Posto
+    summary: Criando Posto
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              no_posto:
+                type: string
+                example: 'Pretória'
+                required: true
+              sg_posto:
+                type: string
+                example: 'PA'
+                required: true
+              id_pais:
+                type: number
+                example: 113
+                required: true
+              nu_fator_conversao_rb:
+                type: number
+                example: 94.64
+                required: true
+              nu_fator_conversao_irex:
+                type: number
+                example: 47.32
+                required: true
+    responses:
+      201:
+        description: Retorno do Posto criado
+        content:
+          application/json:
+            schema:
+              properties:
+                id_posto:
+                  type: number
+                  example: 1
+                no_posto:
+                  type: string
+                  example: 'Pretória'
+                sg_posto:
+                  type: string
+                  example: 'PA'
+                id_pais:
+                  type: number
+                  example: 113
+                nu_fator_conversao_rb:
+                  type: number
+                  example: 94.64
+                nu_fator_conversao_irex:
+                  type: number
+                  example: 47.32
+                in_ativo:
+                  type: boolean
+                  example: true
+
+/api/posto/{id}:
+  get:
+    tags:
+      - Posto
+    summary: Get Posto id
+    parameters:
+      - in: path
+        description: id do Posto
+        name: id
+        required: true
+        type: number
+    responses:
+      200:
+        description: Lista do Posto pesquisado
+        content:
+          application/json:
+            schema:
+              properties:
+                id_posto:
+                  type: number
+                  example: 1
+                no_posto:
+                  type: string
+                  example: 'Pretória'
+                sg_posto:
+                  type: string
+                  example: 'PA'
+                id_pais:
+                  type: number
+                  example: 113
+                nu_fator_conversao_rb:
+                  type: number
+                  example: 94.64
+                nu_fator_conversao_irex:
+                  type: number
+                  example: 47.32
+                in_ativo:
+                  type: boolean
+                  example: true
+
+/api/atualizar-posto/{id}:
+  put:
+    tags:
+      - Posto
+    summary: Put Posto id
+    parameters:
+      - in: path
+        description: id do Posto
+        name: id
+        required: true
+        type: number
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            properties:
+              no_posto:
+                type: string
+                example: 'Pretória'
+                required: true
+              sg_posto:
+                type: string
+                example: 'PA'
+                required: true
+              id_pais:
+                type: number
+                example: 113
+                required: true
+              nu_fator_conversao_rb:
+                type: number
+                example: 94.64
+                required: true
+              nu_fator_conversao_irex:
+                type: number
+                example: 47.32
+                required: true
+    responses:
+      200:
+        description: Lista do Posto pesquisado
+        content:
+          application/json:
+            schema:
+              properties:
+                id_posto:
+                  type: number
+                  example: 1
+                no_posto:
+                  type: string
+                  example: 'Pretória'
+                sg_posto:
+                  type: string
+                  example: 'PA'
+                id_pais:
+                  type: number
+                  example: 113
+                nu_fator_conversao_rb:
+                  type: number
+                  example: 94.64
+                nu_fator_conversao_irex:
+                  type: number
+                  example: 47.32
+                in_ativo:
+                  type: boolean
+                  example: true
+
+/api/excluir-posto/{id}:
+  delete:
+    tags:
+      - Posto
+    summary: Delete Posto id
+    parameters:
+      - in: path
+        description: id do Posto
+        name: id
+        required: true
+        type: number
+    responses:
+      200:
+        description: Lista do Posto pesquisado
+        content:
+          application/json:
+            schema:
+              properties:
+                id_posto:
+                  type: number
+                  example: 1
+                no_posto:
+                  type: string
+                  example: 'Pretória'
+                sg_posto:
+                  type: string
+                  example: 'PA'
+                id_pais:
+                  type: number
+                  example: 113
+                nu_fator_conversao_rb:
+                  type: number
+                  example: 94.64
+                nu_fator_conversao_irex:
+                  type: number
+                  example: 47.32
+                in_ativo:
+                  type: boolean
+                  example: true
