@@ -24,7 +24,5 @@ services:
       - .:/home/node/app
     ports:
       - '3333:3333'
-    extra_hosts:
-      - 'buzz.local.itamaraty.local:127.0.0.1'
     networks:
       - adonijs
