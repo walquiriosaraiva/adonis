@@ -24,10 +24,9 @@ Route.get('/', async () => {
   return { message: 'API SKELETON COM ADONISJS' }
 })
 
-Route.get('usuario', 'UsuarioController.buscarUsuario')
-
 Route.group(() => {
-  Route.post('getUnidadeAdm', 'LoginController.getUnidadeAdm')
+  Route.get('users', 'UserController.index')
+  Route.post('user', 'UserController.store')
 })
   .middleware('auth')
   .prefix('api')
